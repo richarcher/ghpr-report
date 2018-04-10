@@ -1,0 +1,15 @@
+{
+  "name": "ghpr-report",
+  "version": "1.0.0",
+  "description": "Lists the currently active github pull requests for your team",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": "github:richarcher/ghpr-report",
+  "author": "Rich Archer",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}

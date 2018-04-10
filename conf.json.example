@@ -1,0 +1,16 @@
+{
+  "token": "{ADD_YOUR_GITHUB_TOKEN}",
+  "organisation": "prodigyfinance",
+  "platform": "prodigy",
+  "team_repositories": ["prodigy", "school-api", "school-admin", "ui-core"],
+  "statuses": {
+    "APPROVED": ":white_check_mark:",
+    "CHANGES_REQUESTED": ":no_entry_sign:",
+    "COMMENTED": ":speech_balloon:"
+  },
+  "team_members": {
+    "{GITHUB_USERNAME}": {
+      "slack_username": "{SLACK_USERNAME}"
+    }
+  }
+}
