@@ -13,14 +13,14 @@ module.exports = function(config) {
   const getOrgRepos = function() {
     return request({
       method: "GET",
-      uri: `https://api.github.com/orgs/${organisation}/repos?per_page=100`,
+      uri: `https://api.github.com/search/repositories?q=org:${organisation}&per_page=100`,
       json: true,
       headers: {
         Authorization: `Bearer ${token}`,
         "User-Agent": "Pull requester"
       }
     }).then(function(response) {
-      return response.map(repo => ({
+      return response.items.map(repo => ({
         name: repo.name,
         owner: repo.owner.login
       }));

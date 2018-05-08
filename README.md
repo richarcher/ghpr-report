@@ -31,5 +31,5 @@ Depends on having node and NPM/Yarn installed.
 
 Relies on Docker being installed.
 
-1. `docker build -t bento-pull-requests .`
-1. `docker run bento-pull-requests`
+1. `docker build -t bpr .`
+1. `docker run --rm bpr`
