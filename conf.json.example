@@ -6,7 +6,8 @@
   "statuses": {
     "APPROVED": ":white_check_mark:",
     "CHANGES_REQUESTED": ":no_entry_sign:",
-    "COMMENTED": ":speech_balloon:"
+    "COMMENTED": ":speech_balloon:",
+    "PENDING": ":hourglass:"
   },
   "team_members": {
     "{GITHUB_USERNAME}": {
