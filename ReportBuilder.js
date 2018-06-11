@@ -43,6 +43,12 @@ module.exports = function(config) {
     }
   };
 
+  const labelText = function(labels) {
+    let labelInfo = labels.map(label => label.name).join(", ");
+    if (labelInfo) labelInfo = ` _[${labelInfo}]_ `;
+    return labelInfo;
+  };
+
   const countUniqueReviews = function(reviews) {
     return reviews.reduce(function(accumulator, currentValue, _currentIndex) {
       accumulator[currentValue] = accumulator[currentValue] + 1 || 1;
@@ -55,7 +61,7 @@ module.exports = function(config) {
   };
 
   this.report = function(repo) {
-    let { html_url, title, user, created_at, review_state } = repo;
-    return `- ${html_url} (${title}) =>${reviewState(review_state)}${timeSinceDate(created_at)} ago @${teamMemberLookup(user.login)}`;
+    let { html_url, title, user, created_at, review_state, labels } = repo;
+    return `- ${html_url} (${title}${labelText(labels)}) =>${reviewState(review_state)}${timeSinceDate(created_at)} ago @${teamMemberLookup(user.login)}`;
   };
 }

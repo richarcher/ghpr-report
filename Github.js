@@ -46,6 +46,7 @@ module.exports = function(config) {
         },
         created_at: pr.created_at,
         statuses_url: pr.statuses_url,
+        labels: pr.labels,
         reviews_url: `https://api.github.com/repos/${repo.owner}/${
           repo.name
         }/pulls/${pr.number}/reviews`
